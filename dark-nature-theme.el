@@ -46,7 +46,7 @@
     `(cursor ((,class (:foreground "yellow"))))
     ;; Highlighting faces
     `(fringe ((,class (:background "darkslategrey"))))
-    `(highlight ((,class (:background "#234" :foreground nil))))
+    `(highlight ((,class (:background "goldenrod4" :foreground "white"))))
     `(region ((,class (:background "blue4"  :foreground nil))))
     ;;   `(secondary-selection ((,class (:background ,blue-0))))
     `(isearch ((,class (:foreground "white" :background "#448"))))

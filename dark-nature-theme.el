@@ -1,11 +1,11 @@
 ;;; dark-nature-theme.el --- Dark Nature custom theme for faces
 
-;; Copyright (C) 2015  Vagn Johansen
+;; Copyright (C) 2015-2024 Vagn Johansen
 
 ;; Author: Vagn Johansen <gonz808@hotmail.com>
 ;; Keywords: faces
 ;; Package-Version:
-;; Version: 0
+;; Version: 1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -42,12 +42,12 @@
 
   (custom-theme-set-faces
     'dark-nature
-    `(default ((,class (:foreground "wheat" :background "black"))))
+    `(default ((,class (:foreground "wheat" :background "#144"))))
     `(cursor ((,class (:foreground "yellow"))))
     ;; Highlighting faces
-    `(fringe ((,class (:background "darkslategrey"))))
-    `(highlight ((,class (:background "goldenrod4" :foreground "white"))))
-    `(region ((,class (:background "blue4"  :foreground nil))))
+    `(fringe ((,class (:background "grey21"))))
+    `(highlight ((,class (:background "DarkOliveGreen" :foreground "white"))))
+    `(region ((,class (:background "#006868"  :foreground nil))))
     ;;   `(secondary-selection ((,class (:background ,blue-0))))
     `(isearch ((,class (:foreground "white" :background "#448"))))
     `(lazy-highlight ((,class (:background "#264" :foreground "white"))))
@@ -63,7 +63,7 @@
     `(font-lock-function-name-face ((,class (:foreground "LightSkyBlue"))))
     `(font-lock-keyword-face ((,class (:foreground "#A1C2DA"))))
     `(font-lock-string-face ((,class (:foreground "#A5C261"))))
-    `(font-lock-type-face ((,class (:foreground "#44f048")))) ; 6e9cbe 9e9cbe 44b048
+    `(font-lock-type-face ((,class (:foreground "#44f068"))))
     `(dired-header ((,class (:foreground "green2"))))
     `(dired-directory ((,class (:foreground "deepskyblue" :bold t))))
     `(font-lock-variable-name-face ((,class (:foreground "LightGoldenrod"))))
@@ -72,9 +72,6 @@
     `(button ((,class (:underline t :foreground "#a5beef"))))
     `(link ((,class (:underline t :foreground "cyan2"))))
     `(link-visited ((,class (:underline t :foreground "violet"))))
-
-    `(flymake-errline ((,class (:background nil :underline "red"))))
-    `(flymake-warnline ((,class (:background nil :underline "magenta3"))))
 
     '(header-line
        ((t
@@ -97,6 +94,13 @@
     ;; Darken these
     `(ediff-current-diff-C ((,class (:background "#555522"))))
     `(ediff-fine-diff-C ((,class (:background "#888822"))))
+
+    ;;
+    '(company-tooltip  ((t (:background "grey15"))))
+    '(magit-hash ((t (:foreground "#4ad"))))
+    '(magit-section-heading ((t (:background "grey25" :box (:line-width 2 :color "grey45" :style released-button)))))
+    '(magit-section-highlight ((t (:background "#002a2a"))))
+    '(iedit-occurrence ((t (:inverse-video t))))
     ))
 
 

@@ -1,11 +1,11 @@
-;;; dark-nature-theme.el --- Dark Nature custom theme for faces
+;;; dark-nature-theme.el --- Dark Nature custom theme for faces  -*- lexical-binding:t -*-
 
-;; Copyright (C) 2015-2024 Vagn Johansen
+;; Copyright (C) 2015-2025 Vagn Johansen
 
 ;; Author: Vagn Johansen <gonz808@hotmail.com>
 ;; Keywords: faces
 ;; Package-Version:
-;; Version: 1
+;; Version: 1.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -33,12 +33,9 @@
 ;;; Code:
 
 (deftheme dark-nature
-  "A dark green/brown color theme (VJ 2011)")
+  "A dark green/brown color theme (VJ 2011).")
 
-(let ((class '((class color) (min-colors 89)))
-       ;; Dark-Nature palette colors.
-       (blue-1 "#729fcf") (blue-2 "#3465a4") (blue-3 "#204a87")
-       )
+(let ((class '((class color) (min-colors 89))))
 
   (custom-theme-set-faces
     'dark-nature
@@ -68,10 +65,17 @@
     `(dired-directory ((,class (:foreground "deepskyblue" :bold t))))
     `(font-lock-variable-name-face ((,class (:foreground "LightGoldenrod"))))
     `(font-lock-warning-face ((,class (:foreground "Pink" :weight bold))))
+    `(font-lock-regexp-grouping-backslash ((,class (:foreground "olive drab" :weight bold))))
+    `(font-lock-regexp-grouping-construct ((,class (:foreground "dark khaki" :weight bold))))
     ;; Button and link faces
     `(button ((,class (:underline t :foreground "#a5beef"))))
     `(link ((,class (:underline t :foreground "cyan2"))))
     `(link-visited ((,class (:underline t :foreground "violet"))))
+
+    ;; `(flymake-errline ((,class (:background nil
+    ;;                              :underline (:color "red3" :style wave)))))
+    ;; `(flymake-warnline ((,class (:background nil
+    ;;                               :underline (:color "magenta3" :style wave)))))
 
     '(header-line
        ((t
